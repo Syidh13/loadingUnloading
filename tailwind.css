@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+/* ======== Fonts ======== */
+.cs-font-headline1 {
+  @apply text-3xl font-headline1;
+}
+
+.cs-font-headline2 {
+  @apply text-2xl font-headline2;
+}
+
+.cs-font-title {
+  @apply text-base font-title;
+}
+
+.cs-font-subtitle {
+  @apply text-base font-subtitle;
+}
+
+.cs-font-body {
+  @apply text-sm font-body;
+}
+
+.cs-font-caption {
+  @apply text-xs font-caption;
+}
+
+.cs-font-overline {
+  @apply text-[0.625rem] uppercase font-overline;
+}
+
+.cs-font-buttonHover {
+  @apply text-sm font-buttonbold;
+}
+
+.cs-font-buttonNormal {
+  @apply text-sm font-buttonregular;
+}
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: 'primary-Light';
+    src: url('/layouts/media/fonts/Mulish-Light.ttf');
+  }
+  @font-face {
+    font-family: 'primary-Bold';
+    src: url('/layouts/media/fonts/Mulish-Bold.ttf');
+  }
+  @font-face {
+    font-family: 'primary-Medium';
+    src: url('/layouts/media/fonts/Mulish-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'primary-Regular';
+    src: url('/layouts/media/fonts/Mulish-Regular.ttf');
+  }
+}

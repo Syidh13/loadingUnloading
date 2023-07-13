@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <section class="flex justify-center h-screen">
+        <div class="max-w-5xl w-full my-auto p-10 space-y-10">
+            <!-- logo -->
+            <a href="./index.html" class="flex justify-center">
+                <img src="./media/img/lg-csn.png" alt="" class="h-8">
+            </a>
+            <!-- end logo -->
+
+            <!-- title -->
+            <section>
+                <h1 class="cs-font-headline1 text-center text-cs-black">Select Category</h1>
+                <h1 class="cs-font-body text-center text-cs-gray">Select the category you need</h1>
+            </section>
+            <!-- end title -->
+
+            <!-- Button -->
+            <section class="grid md:grid-cols-4 grid-cols-2 gap-3">
+                <div class="hidden md:block"></div>
+                <a href="./loading.html">
+                    <div
+                        class="transition-all border rounded-lg bg-white space-y-3 hover:bg-cs-primary-soft hover:border-cs-primary flex-row text-center justify-center p-4 md:p-10">
+                        <i class="fa-duotone fa-inbox-in text-3xl"></i>
+                        <h1 class="cs-font-title">Loading</h1>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="transition-all border rounded-lg bg-white space-y-3 hover:bg-cs-primary-soft hover:border-cs-primary flex-row text-center justify-center p-4 md:p-10">
+                        <i class="fa-duotone fa-inbox-out text-3xl"></i>
+                        <h1 class="cs-font-title">Unloading</h1>
+                    </div>
+                </a>
+                <div class="hidden md:block"></div>
+
+                <div class="hidden md:block"></div>
+                <a href="./checkStatus.html" class="col-span-2">
+                    <div
+                        class="transition-all border rounded-lg bg-white space-y-3 hover:bg-cs-primary-soft hover:border-cs-primary flex-row text-center justify-center p-4 md:p-10">
+                        <i class="fa-duotone fa-magnifying-glass text-3xl"></i>
+                        <h1 class="cs-font-title">Check Status</h1>
+                    </div>
+                </a>
+                <div class="hidden md:block"></div>
+            </section>
+            <!-- end Button -->
+        </div>
+    </section>
+
+</body>
+
+</html>

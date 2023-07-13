@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- alpine js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+    <!-- ========= Header ========= -->
+    <div class="fixed w-full border">
+        <div class="flex justify-center  z-50 px-4 md:px-0 space-x-3 md:space-x-0 bg-white py-4">
+            <!-- back icon for mobile -->
+            <div class="my-auto">
+                <a href="./loading.html" class="block md:hidden">
+                    <i
+                        class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                </a>
+            </div>
+            <!-- end back icon for mobile -->
+            <section class=" w-full max-w-6xl md:px-4 lg:px-0">
+                <a href="./index.html">
+                    <img src="./media/img/lg-csn.png" alt="" class="h-8 md:h-10">
+                </a>
+            </section>
+        </div>
+
+        <!-- Search for mobile -->
+        <section class=" w-full py-2 px-3 bg-white md:hidden block">
+            <input type="search" name="" id=""
+                class="w-full cs-font-body rounded-md p-2 bg-slate-100 focus:bg-white border border-white focus:border-slate-200 focus:outline-none"
+                placeholder="search">
+        </section>
+        <!-- end Search for mobile -->
+
+    </div>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="md:py-20 pb-12 pt-20 flex justify-center">
+        <div class="max-w-6xl w-full px-4 lg:px-0 space-y-4 ">
+            <div class="md:grid md:grid-cols-3 md:py-8 py-4 border-b hidden">
+                <div class="hidden md:block">
+                    <a href="./loading.html">
+                        <i
+                            class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                    </a>
+                </div>
+                <!-- title -->
+                <div class="flex justify-center  space-x-3">
+                    <h1 class="my-auto cs-font-headline2 text-cs-black">Add Items</h1>
+                </div>
+                <!-- end title -->
+            </div>
+
+            <!-- ========= main Form ========= -->
+            <div class="flex justify-center">
+
+                <div class="md:max-w-3xl w-full md:grid md:grid-cols-3 md:gap-3 py-4 md:py-6">
+                    <!-- ========= select items ========= -->
+                    <div class="md:col-span-2">
+                        <div class="md:border  w-full md:p-4 md:rounded-lg">
+                            <!-- title for desktop -->
+                            <h1 class="cs-font-title hidden md:block md:text-lg text-base text-cs-black pb-2">Select
+                                Items</h1>
+                            <!-- search for desktop -->
+                            <div class="md:flex hidden rounded-lg border bg-slate-100">
+                                <i class="fa-regular fa-magnifying-glass my-auto p-2"></i>
+                                <input type="search" name="" id="" placeholder="Search items"
+                                    class="rounded-r-md p-2 cs-font-body bg-slate-100 w-full">
+                            </div>
+                            <!-- items -->
+                            <div class="py-4">
+                                <ul class="divide-y-[1px]  border">
+
+                                    <!-- table -->
+                                    <li>
+                                        <label class=" p-4 grid grid-cols-8">
+                                            <h1 class="cs-font-body my-auto w-full col-span-5">
+                                                Table</h1>
+                                            <div class="col-span-3 flex justify-end relative" x-data="{ open: false }">
+                                                <div class="my-auto">
+                                                    <button
+                                                        class="p-2 rounded-md bg-white hover:bg-cs-primary hover:text-white transition-all border"
+                                                        @click="open = true">
+                                                        <h1 class="cs-font-caption">Add Items</h1>
+                                                    </button>
+                                                </div>
+                                                <!-- modal -->
+                                                <div class="absolute h-full w-full bg-white" x-show="open" x-transition>
+                                                    <div class="flex justify-center h-full">
+                                                        <div class="flex my-auto w-full justify-between  space-x-2">
+                                                            <button><i
+                                                                    class="fa-regular cursor-pointer hover:bg-cs-primary hover:text-white fa-minus bg-slate-50 p-2 rounded-full"
+                                                                    @click="open = !open"></i>
+                                                            </button>
+                                                            <div class="my-auto">
+                                                                <h1
+                                                                    class="cs-font-body text-cs-black my-auto text-center">
+                                                                    3
+                                                                </h1>
+                                                            </div>
+                                                            <div><i
+                                                                    class="fa-regular cursor-pointer fa-plus bg-slate-50 p-2 rounded-full"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <!-- end table -->
+
+                                    <!-- Kursi -->
+                                    <li>
+                                        <label class=" p-4 grid grid-cols-8">
+                                            <h1 class="cs-font-body my-auto w-full col-span-5">
+                                                Kursi</h1>
+                                            <div class="col-span-3 flex justify-end relative" x-data="{ open: false }">
+                                                <div class="my-auto">
+                                                    <button
+                                                        class="p-2 rounded-md bg-white hover:bg-cs-primary hover:text-white transition-all border"
+                                                        @click="open = true">
+                                                        <h1 class="cs-font-caption">Add Items</h1>
+                                                    </button>
+                                                </div>
+                                                <!-- modal -->
+                                                <div class="absolute h-full w-full bg-white" x-show="open" x-transition>
+                                                    <div class="flex justify-center h-full">
+                                                        <div class="flex my-auto w-full justify-between  space-x-2">
+                                                            <button><i
+                                                                    class="fa-regular cursor-pointer hover:bg-cs-primary hover:text-white fa-minus bg-slate-50 p-2 rounded-full"
+                                                                    @click="open = !open"></i>
+                                                            </button>
+                                                            <div class="my-auto">
+                                                                <h1
+                                                                    class="cs-font-body text-cs-black my-auto text-center">
+                                                                    1
+                                                                </h1>
+                                                            </div>
+                                                            <div><i
+                                                                    class="fa-regular cursor-pointer fa-plus bg-slate-50 p-2 rounded-full"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <!-- end Kursi -->
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= end select items ========= -->
+
+                    <!-- ========= create items for desktop ========= -->
+                    <div class="md:col-span-1 hidden md:block md:space-y-2">
+                        <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6 sticky top-40">
+                            <!-- create item button for desktop -->
+                            <a href="#">
+                                <div
+                                    class="border rounded-full p-3 cs-font-buttonNormal hover:border-white hover:text-white hover:bg-cs-primary transition-all">
+                                    <h1 class="text-center">Add</h1>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6 sticky top-40">
+                            <!-- create item button for desktop -->
+                            <a href="./loading-fill.html">
+                                <div
+                                    class="border rounded-full p-3 cs-font-buttonNormal hover:border-white bg-cs-primary text-white transition-all">
+                                    <h1 class="text-center">Add 3 Items</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ========= end create items for desktop ========= -->
+                </div>
+            </div>
+
+            <!-- ========= end main Form ========= -->
+
+        </div>
+    </section>
+    <!-- ========= end Main ========= -->
+
+    <!-- ========= Footer create items for mobile ========= -->
+    <section class="fixed bg-white md:hidden bottom-0 w-full">
+        <a href="./loading-fill.html">
+            <div class="py-2 border-t flex justify-center px-4">
+                <h1 class="cs-font-buttonNormal text-center bg-cs-primary py-3 w-full rounded-md text-white">Add 3 Items
+                </h1>
+            </div>
+        </a>
+    </section>
+    <!-- ========= end Footer create items for mobile ========= -->
+
+</body>
+
+</html>

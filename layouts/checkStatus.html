@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Status</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+    <!-- ========= Header ========= -->
+    <div class="fixed w-full">
+        <div class="flex justify-center  z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+            <!-- back icon for mobile -->
+            <div class="my-auto">
+                <a href="./index.html" class="block md:hidden">
+                    <i
+                        class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                </a>
+            </div>
+            <!-- back icon for mobile -->
+            <section class=" w-full max-w-6xl md:px-4 lg:px-0">
+                <a href="./index.html">
+                    <img src="./media/img/lg-csn.png" alt="" class="h-8 md:h-10">
+                </a>
+            </section>
+        </div>
+    </div>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="py-20 flex justify-center">
+        <div class="max-w-6xl w-full px-4 lg:px-0 space-y-4">
+            <div class="md:grid md:grid-cols-3 md:py-8 py-4 border-b ">
+                <div class="hidden md:block">
+                    <a href="./index.html">
+                        <i
+                            class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                    </a>
+                </div>
+                <!-- title -->
+                <div class="flex justify-center  space-x-3">
+                    <h1 class="my-auto cs-font-headline2 text-cs-black">Check Status</h1>
+                </div>
+                <!-- end title -->
+            </div>
+
+            <!-- ========= main Form ========= -->
+            <div class="flex justify-center">
+                <div class="md:max-w-3xl w-full  ">
+
+
+                    <div x-data="{ open: false }" class="md:space-y-6 space-y-4">
+                        <!-- ========= Search box ========= -->
+                        <div class="md:border space-y-2  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                            <!-- title -->
+                            <h1 class="cs-font-title md:text-lg text-base text-cs-black">Track Number</h1>
+                            <!-- form -->
+                            <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                                <!-- name -->
+                                <div class="space-y-1 col-span-2">
+                                    <h1 class="cs-font-caption text-cs-gray">Please enter your track number</h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                            </div>
+                            <!-- button -->
+                            <button class=" w-full flex justify-center" @click="open = true">
+                                <div
+                                    class="bg-cs-primary hover:bg-cs-primary-hover transition-all py-2 px-4 rounded-lg">
+                                    <h1 class="cs-font-buttonNormal text-white">Search</h1>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- ========= end Search box ========= -->
+
+                        <!-- ========= Result ========= -->
+                        <div class="border space-y-2  w-full p-4 rounded-lg py-4 md:py-6" x-show="open">
+                            <!-- title -->
+                            <h1 class="cs-font-title md:text-lg text-base text-cs-black">Result</h1>
+                            <!-- form -->
+                            <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                                <!-- name -->
+                                <div class="space-y-1 md:border md:p-2 rounded-lg">
+                                    <h1 class="cs-font-caption text-cs-gray">Name</h1>
+                                    <h1 class="cs-font-body text-cs-black">Syidh Al Rasyid</h1>
+                                </div>
+                                <!-- Email -->
+                                <div class="space-y-1 md:border md:p-2 rounded-lg">
+                                    <h1 class="cs-font-caption text-cs-gray">Email</h1>
+                                    <h1 class="cs-font-body text-cs-black">syidh.illuminaty@gmail.com</h1>
+                                </div>
+                                <!-- Trace Number -->
+                                <div class="space-y-1 md:border md:p-2 rounded-lg">
+                                    <h1 class="cs-font-caption text-cs-gray">Trace Number</h1>
+                                    <h1 class="cs-font-body text-cs-primary">KYP-6725367-823899</h1>
+                                </div>
+                            </div>
+
+                            <!-- ========= timeline ========= -->
+                            <div class="border p-2 rounded-lg">
+                                <ol class="relative border-l border-gray-200">
+                                    <li class="mb-10 ml-4 space-y-2">
+                                        <div
+                                            class="absolute w-3 h-3 bg-cs-primary rounded-full mt-1.5 -left-1.5 border border-cs-primary-hover ">
+                                        </div>
+                                        <time class="mb-1 cs-font-caption  py-1 px-4 bg-cs-primary text-white">23
+                                            Feb 2023</time>
+                                        <div>
+                                            <h3 class="cs-font-title text-cs-black">Send Request</h3>
+                                            <p class="mb-4 cs-font-body text-cs-gray">Waiting for the next department
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-10 ml-4 space-y-2">
+                                        <div
+                                            class="absolute w-3 h-3 bg-cs-primary rounded-full mt-1.5 -left-1.5 border border-cs-primary-hover ">
+                                        </div>
+                                        <time class="mb-1 cs-font-caption  py-1 px-4 bg-cs-primary text-white">23
+                                            Feb 2023</time>
+                                        <div>
+                                            <h3 class="cs-font-title text-cs-black">Dept Finance</h3>
+                                            <p class="mb-4 cs-font-body text-cs-gray">Approve, send to the next
+                                                departement
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-10 ml-4 space-y-2">
+                                        <div
+                                            class="absolute w-3 h-3 bg-cs-primary rounded-full mt-1.5 -left-1.5 border border-cs-primary-hover ">
+                                        </div>
+                                        <time class="mb-1 cs-font-caption  py-1 px-4 bg-cs-primary text-white">23
+                                            Feb 2023</time>
+                                        <div>
+                                            <h3 class="cs-font-title text-cs-black">GM</h3>
+                                            <p class="mb-4 cs-font-body text-cs-gray">Approve, send to the next
+                                                departement
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-10 ml-4 space-y-2">
+                                        <div
+                                            class="absolute w-3 h-3 bg-cs-primary rounded-full mt-1.5 -left-1.5 border border-cs-primary-hover ">
+                                        </div>
+                                        <time class="mb-1 cs-font-caption  py-1 px-4 bg-cs-primary text-white">23
+                                            Feb 2023</time>
+                                        <div>
+                                            <h3 class="cs-font-title text-cs-black">Security</h3>
+                                            <p class="mb-4 cs-font-body text-cs-gray">Approve, send to the next
+                                                departement
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <!-- ========= end timeline ========= -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ========= end Result ========= -->
+
+
+
+
+                </div>
+            </div>
+            <!-- ========= end main Form ========= -->
+
+        </div>
+    </section>
+    <!-- ========= end Main ========= -->
+
+</body>
+
+</html>
