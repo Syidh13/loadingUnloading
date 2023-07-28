@@ -9,12 +9,17 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <!-- ========= Header ========= -->
     <div class="fixed w-full">
-        <div class="flex justify-center  z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+        <div class="flex justify-center z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
             <!-- back icon for mobile -->
             <div class="my-auto">
                 <a href="./index.html" class="block md:hidden">
@@ -99,6 +104,33 @@
                     </div>
                     <!-- ========= end Personal Data Form ========= -->
 
+                    <!-- ========= Address Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Address</h1>
+                        <!-- form -->
+                        <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                            <!-- Destination address -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Destination address</h1>
+                                <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                            </div>
+                            <div class="hidden md:block"></div>
+                            <!-- Floor -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Floor</h1>
+                                <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                            </div>
+                            <!-- Unit -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Unit</h1>
+                                <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ========= end Address Form ========= -->
+
                     <!-- ========= Request Schedule Form ========= -->
                     <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
                         <!-- title -->
@@ -113,35 +145,138 @@
                             <!-- time -->
                             <div class="space-y-1">
                                 <h1 class="cs-font-caption text-cs-gray">Select Time</h1>
-                                <input type="time" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+
+                                <!-- radio button -->
+                                <div>
+                                    <div class="flex items-center py-2">
+                                        <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                            class="w-4 h-4 text-cs-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600  focus:ring-2">
+                                        <label for="default-radio-1" class="ml-2 cs-font-body text-cs-black">22:00 -
+                                            08:00</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- ========= end Request Schedule Form ========= -->
 
                     <!-- ========= Items Form ========= -->
-                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6" x-data="{ open: false }">
                         <!-- title -->
                         <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Items</h1>
                         <!-- form -->
-                        <a href="./addItems.html">
+                        <button class="w-full" @click="open = true">
                             <div
                                 class="border p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
                                 <h1 class="cs-font-buttonNormal text-center">+ Add item</h1>
                             </div>
-                        </a>
+                        </button>
+                        <!-- modal -->
+                        <div class="fixed top-0 left-0 backdrop-blur" x-transition x-show="open">
+                            <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
+                                <div class="my-auto bg-white shadow-lg w-full max-w-md rounded-md">
+                                    <div class="p-4 space-y-3">
+                                        <h1 class="cs-font-title">Create Items</h1>
+                                        <!-- Item Name -->
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-caption text-cs-gray">Item name</h1>
+                                            <input type="text" name="" id=""
+                                                class="w-full border cs-font-body p-2 rounded-md text-cs-black"
+                                                placeholder="Input your item name">
+                                        </div>
+
+                                        <!-- Item quantity -->
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-caption text-cs-gray">Item quantity</h1>
+                                            <div>
+                                                <input type="number" name="" id=""
+                                                    class="w-full border cs-font-body p-2 rounded-md text-cs-black">
+                                            </div>
+                                        </div>
+
+                                        <!-- Item unit -->
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-caption text-cs-gray">Item unit</h1>
+                                            <input type="text" name="" id=""
+                                                class="w-full border cs-font-body p-2 rounded-md text-cs-black"
+                                                placeholder="Input your item unit">
+                                        </div>
+
+                                        <!-- photo -->
+                                        <div class="space-y-1">
+                                            <h1 class="cs-font-caption text-cs-gray">Take a unit photo</h1>
+                                            <div class="flex space-x-2">
+                                                <div>
+                                                    <button class="h-20 w-20 border rounded-md">
+                                                        <i class="fa-duotone fa-camera"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="h-20 w-20">
+                                                    <img src="https://images.pexels.com/photos/279947/pexels-photo-279947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                        alt="" class="object-cover h-20 w-20 rounded-md align-middle">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Line -->
+                                    <div class="w-full h-1 bg-cs-primary-soft"></div>
+
+                                    <div class="p-4">
+                                        <div class="flex justify-end space-x-3">
+                                            <button @click="open = !open"
+                                                class="p-2 text-cs-gray cs-font-buttonNormal">Cancel</button>
+                                            <button
+                                                class="p-2 text-white cs-font-buttonNormal hover:bg-cs-primary-hover transition-all bg-cs-primary rounded-md">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- ========= end Items Form ========= -->
-
-
                 </div>
             </div>
             <!-- ========= end main Form ========= -->
+
+            <!-- ========= Footer ========= -->
+            <div class="fixed w-full border-t bottom-0 left-0">
+                <div class="flex justify-center z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+                    <div class="grid grid-cols-2 w-full md:max-w-6xl gap-3">
+                        <!-- hollow hidden for desktop -->
+                        <div class="hidden md:block"></div>
+                        <!-- reset button for mobile -->
+                        <div class="bg-blue-200 md:hidden">
+                            <button class="p-2 bg-cs-gray w-full rounded-md">
+                                <h1 class="cs-font-buttonNormal text-white">Reset</h1>
+                            </button>
+                        </div>
+
+                        <div class="flex md:justify-end w-full space-x-3">
+                            <!-- reset for desktop -->
+                            <button class="p-2 bg-cs-gray w-full rounded-md hidden md:block">
+                                <h1 class="cs-font-buttonNormal text-white">Reset</h1>
+                            </button>
+                            <!-- Submit -->
+                            <button
+                                class="p-2 bg-cs-primary hover:bg-cs-primary-hover transition-colors w-full rounded-md">
+                                <h1 class="cs-font-buttonNormal text-white">Submit</h1>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ========= end Footer ========= -->
 
         </div>
     </section>
     <!-- ========= end Main ========= -->
 
 </body>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
 
 </html>
