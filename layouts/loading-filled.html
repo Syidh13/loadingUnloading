@@ -104,6 +104,23 @@
                     </div>
                     <!-- ========= end Personal Data Form ========= -->
 
+                    <!-- ========= Document Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Document</h1>
+                        <!-- form -->
+                        <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                            <!-- name -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Upload document (SIKA)</h1>
+                                <input type="file" name="" id=""
+                                    class="rounded-md border cs-font-caption text-sm text-cs-gray">
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                    </div>
+                    <!-- ========= end Document Form ========= -->
+
                     <!-- ========= Address Form ========= -->
                     <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
                         <!-- title -->
@@ -165,14 +182,123 @@
                         <!-- title -->
                         <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Items</h1>
                         <!-- form -->
-                        <button class="w-full" @click="open = true">
-                            <div
-                                class="border p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
-                                <h1 class="cs-font-buttonNormal text-center">+ Add item</h1>
+                        <div class="space-y-3">
+                            <!-- List form filled -->
+                            <!-- filled 1 (No Photo) -->
+                            <div class="relative">
+                                <button class="w-full relative" @click="open = true">
+                                    <div
+                                        class="border  flex space-x-3 p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
+                                        <div class="h-16 w-16 rounded-md bg-slate-200 flex">
+                                            <div class="my-auto mx-auto">
+                                                <i class="fa-regular fa-image-slash text-cs-gray my-auto mx-auto"></i>
+                                                <h1 class="cs-font-caption text-cs-gray">No Photo</h1>
+                                            </div>
+                                        </div>
+                                        <!-- information -->
+                                        <div class="text-left">
+                                            <h1 class="cs-font-title">PC Samsung C2 Duo</h1>
+                                            <h2 class="cs-font-body text-cs-gray">4 Dus</h2>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- absolute delete -->
+                                <div x-data="{ open: false }">
+                                    <div class="absolute bg-red-500 cursor-pointer hover:bg-red-400 rounded-bl-md rounded-tr-md px-3 py-1 right-0 top-0"
+                                        @click="open = true">
+                                        <i class="fa-regular text-white fa-xmark"></i>
+                                    </div>
+                                    <!-- modal delete -->
+                                    <div class="fixed top-0 left-0 z-30 backdrop-blur" x-transition x-show="open">
+                                        <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
+                                            <div
+                                                class="my-auto space-y-4 bg-white shadow-lg w-full max-w-md rounded-md p-8">
+                                                <div>
+                                                    <h1 class="cs-font-title text-center">Are you sure want to
+                                                        delete
+                                                        this item?
+                                                    </h1>
+                                                </div>
+
+                                                <div>
+                                                    <div class="flex justify-center space-x-3">
+                                                        <button @click="open = !open"
+                                                            class="p-2 text-cs-gray cs-font-buttonNormal">Cancel</button>
+                                                        <button
+                                                            class="p-2 text-white cs-font-buttonNormal hover:bg-red-400 transition-all bg-red-500 rounded-md">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end modal delete -->
+                                </div>
                             </div>
-                        </button>
+                            <!-- end filled 1 (No Photo) -->
+
+                            <!-- filled 2 -->
+                            <div class="relative">
+                                <button class="w-full relative" @click="open = true">
+                                    <div
+                                        class="border  flex space-x-3 p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
+                                        <img src="https://images.pexels.com/photos/279947/pexels-photo-279947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                            alt="" class="h-16 w-16 object-cover rounded-md align-middle">
+                                        <!-- information -->
+                                        <div class="text-left">
+                                            <h1 class="cs-font-title">Gelas</h1>
+                                            <h2 class="cs-font-body text-cs-gray">4 Dus</h2>
+                                        </div>
+                                    </div>
+                                </button>
+                                <!-- absolute delete -->
+                                <div x-data="{ open: false }">
+                                    <div class="absolute bg-red-500 cursor-pointer hover:bg-red-400 rounded-bl-md rounded-tr-md px-3 py-1 right-0 top-0"
+                                        @click="open = true">
+                                        <i class="fa-regular text-white fa-xmark"></i>
+                                    </div>
+                                    <!-- modal delete -->
+                                    <div class="fixed top-0 left-0 z-30 backdrop-blur" x-transition x-show="open">
+                                        <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
+                                            <div
+                                                class="my-auto space-y-4 bg-white shadow-lg w-full max-w-md rounded-md p-8">
+                                                <div>
+                                                    <h1 class="cs-font-title text-center">Are you sure want to
+                                                        delete
+                                                        this item?
+                                                    </h1>
+                                                </div>
+
+                                                <div>
+                                                    <div class="flex justify-center space-x-3">
+                                                        <button @click="open = !open"
+                                                            class="p-2 text-cs-gray cs-font-buttonNormal">Cancel</button>
+                                                        <button
+                                                            class="p-2 text-white cs-font-buttonNormal hover:bg-red-400 transition-all bg-red-500 rounded-md">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end modal delete -->
+                                </div>
+                            </div>
+                            <!-- end filled 2 -->
+
+                            <!-- end List form filled -->
+
+                            <!-- Button Add item -->
+                            <button class="w-full" @click="open = true">
+                                <div
+                                    class="border p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
+                                    <h1 class="cs-font-buttonNormal text-center">+ Add item</h1>
+                                </div>
+                            </button>
+                            <!-- end Button Add item -->
+                        </div>
+                        <!-- end form -->
+
                         <!-- modal -->
-                        <div class="fixed top-0 left-0 backdrop-blur" x-transition x-show="open">
+                        <div class="fixed top-0 left-0 z-20 backdrop-blur" x-transition x-show="open">
                             <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
                                 <div class="my-auto bg-white shadow-lg w-full max-w-md rounded-md">
                                     <div class="p-4 space-y-3">
@@ -226,12 +352,11 @@
                                         <div class="flex justify-end space-x-3">
                                             <button @click="open = !open"
                                                 class="p-2 text-cs-gray cs-font-buttonNormal">Cancel</button>
-                                            <a href="./loading-filled.html">
-                                                <button
-                                                    class="p-2 text-white cs-font-buttonNormal hover:bg-cs-primary-hover transition-all bg-cs-primary rounded-md">Submit</button>
-                                            </a>
+                                            <button
+                                                class="p-2 text-white cs-font-buttonNormal hover:bg-cs-primary-hover transition-all bg-cs-primary rounded-md">Submit</button>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -260,10 +385,42 @@
                                 <h1 class="cs-font-buttonNormal text-white">Reset</h1>
                             </button>
                             <!-- Submit -->
-                            <button
-                                class="p-2 bg-cs-primary hover:bg-cs-primary-hover transition-colors w-full rounded-md">
-                                <h1 class="cs-font-buttonNormal text-white">Submit</h1>
-                            </button>
+                            <div class="w-full" x-data="{ open: false }">
+                                <button @click="open = true"
+                                    class="p-2 bg-cs-primary hover:bg-cs-primary-hover transition-colors w-full rounded-md">
+                                    <h1 class="cs-font-buttonNormal text-white">Submit</h1>
+                                </button>
+                                <!-- modal submit -->
+                                <div class="fixed top-0 left-0 z-30 backdrop-blur" x-transition x-show="open">
+                                    <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
+                                        <div
+                                            class="my-auto space-y-12 bg-white shadow-lg w-full max-w-md rounded-md p-8">
+                                            <div class="space-y-2 text-center">
+                                                <h1 class="cs-font-title text-center">Are you sure you want <br> to make
+                                                    a
+                                                    loading request?
+                                                </h1>
+                                                <h2 class="cs-font-caption text-cs-gray"> We will send the ID number
+                                                    <br> to the
+                                                    email
+                                                    address you submitted.
+                                                </h2>
+                                            </div>
+
+                                            <div>
+                                                <div class="flex justify-center space-x-3">
+                                                    <button @click="open = !open"
+                                                        class="p-2 text-cs-gray cs-font-buttonNormal w-full">Cancel</button>
+                                                    <a href="./index.html" class="w-full">
+                                                        <button
+                                                            class="p-2 w-full text-white cs-font-buttonNormal hover:bg-cs-primary-hover transition-all bg-cs-primary rounded-md">Yes</button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
