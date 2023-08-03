@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- ========= Header ========= -->
+    <div class="fixed w-full">
+        <div class="flex justify-center z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+            <!-- back icon for mobile -->
+            <div class="my-auto">
+                <a href="./index.html" class="block md:hidden">
+                    <i
+                        class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                </a>
+            </div>
+            <!-- back icon for mobile -->
+            <section class=" w-full max-w-6xl md:px-4 lg:px-0">
+                <a href="./index.html">
+                    <img src="./media/img/lg-csn.png" alt="" class="h-8 md:h-10">
+                </a>
+            </section>
+        </div>
+    </div>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="py-20 flex justify-center">
+        <div class="max-w-6xl w-full px-4 lg:px-0 space-y-4">
+            <div class="md:grid md:grid-cols-3 md:py-8 py-4 border-b ">
+                <div class="hidden md:block">
+                    <a href="./index.html">
+                        <i
+                            class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                    </a>
+                </div>
+                <!-- title -->
+                <div class="flex justify-center  space-x-3">
+                    <h1 class="my-auto cs-font-headline2 text-cs-black">Unloading</h1>
+                </div>
+                <!-- end title -->
+            </div>
+
+            <!-- ========= main Form ========= -->
+            <div class="flex justify-center">
+                <div class="md:max-w-3xl w-full md:space-y-6 space-y-4 ">
+
+                    <!-- ========= Personal Data Form ========= -->
+                    <div class="w-full md:p-4 py-4 md:py-6">
+                        <!-- Note -->
+                        <div>
+                            <h1 class="cs-font-caption text-red-500 bg-red-50 p-2 rounded-md text-center">You can enter
+                                a maximum of
+                                3 forms to unload items.</h1>
+                        </div>
+
+                        <div x-data="{ open: false }">
+                            <!-- Button add form -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 py-4">
+                                <button @click="open = true"
+                                    class="py-4 col-span-1 space-y-2 px-8 rounded-lg bg-cs-primary-soft border border-cs-primary-soft text-cs-primary hover:text-white hover:bg-cs-primary transition-colors">
+                                    <i class="fa-light fa-file-circle-plus text-2xl"></i>
+                                    <h1 class="cs-font-buttonNormal">Add form for unloading</h1>
+                                </button>
+
+                            </div>
+                            <!-- Button add form -->
+
+                            <!-- modal add form -->
+                            <div x-show="open" class="h-screen w-screen backdrop-blur z-10 top-0 left-0 fixed"
+                                x-transition>
+                                <div class="flex justify-center">
+                                    <div class="max-w-2xl w-full relative justify-center flex h-screen px-6 md:px-0 ">
+
+                                        <div class="my-auto p-8 bg-white drop-shadow-md w-full rounded-md">
+                                            <!-- close button -->
+                                            <button class="absolute -top-2 -right-2 drop-shadow-md"
+                                                @click="open = !open">
+                                                <div
+                                                    class="w-8 h-8 rounded-full bg-red-500 text-white flex justify-center">
+                                                    <i class="fa-regular fa-xmark my-auto"></i>
+                                                </div>
+                                            </button>
+
+                                            <div class="space-y-6">
+                                                <!-- title -->
+                                                <div class="space-y-1">
+                                                    <h1 class="cs-font-title text-cs-black text-center uppercase">Add
+                                                        Form
+                                                    </h1>
+                                                    <h1 class="cs-font-caption text-cs-gray text-center">You can enter
+                                                        a maximum of
+                                                        3 forms to unload items.</h1>
+                                                    <!-- note -->
+                                                    <div class="flex justify-center w-full">
+                                                        <div
+                                                            class="border w-full rounded-md border-red-500 bg-red-50 p-1 max-w-sm">
+                                                            <h1 class="cs-font-caption text-center text-red-500">
+                                                                The ID number and email do not match
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end note -->
+                                                </div>
+
+                                                <!-- Input -->
+                                                <div class="flex justify-center">
+                                                    <div class="space-y-2 max-w-md">
+                                                        <!-- id form -->
+                                                        <input type="text" name="" id=""
+                                                            class=" p-2 rounded-md cs-font-body font-body text-sm ring-cs-gray text-cs-black w-full"
+                                                            placeholder="Input ID Form">
+                                                        <!-- email -->
+                                                        <input type="text" name="" id=""
+                                                            class=" p-2 rounded-md cs-font-body font-body text-sm ring-cs-gray text-cs-black w-full"
+                                                            placeholder="Input Email">
+                                                    </div>
+                                                </div>
+                                                <!-- end Input -->
+                                                <!-- button add -->
+
+                                                <button class="flex justify-center w-full">
+                                                    <a href="./unloading-afterAdd.html">
+                                                        <h1 class="bg-cs-primary text-white px-4 py-2 rounded-md
+                                                    cs-font-buttonNormal">
+                                                            Add Now
+                                                        </h1>
+                                                    </a>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal add form -->
+                        </div>
+
+                    </div>
+                    <!-- ========= end Personal Data Form ========= -->
+
+
+                    <!-- ========= end Items Form ========= -->
+                </div>
+            </div>
+            <!-- ========= end main Form ========= -->
+
+        </div>
+    </section>
+    <!-- ========= end Main ========= -->
+
+</body>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
+
+</html>
