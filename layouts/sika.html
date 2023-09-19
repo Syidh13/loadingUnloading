@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./media/fontawesome-pro-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- modal news -->
+    <section x-data="{ open: false }">
+        <div class="h-screen w-screen fixed bg-black/25 z-40" x-show="open">
+            <div class="flex justify-center h-full">
+                <div class="my-auto p-4 overflow-y-auto h-full md:h-0 md:overflow-y-hidden">
+                    <div class="bg-white p-4 rounded-lg md:max-w-4xl">
+                        <!-- Ketentuan Kerja -->
+                        <div class=" rounded-md">
+
+                            <!-- title -->
+                            <section class="p-4">
+                                <div class="col-span-1 uppercase text-center cs-font-title underline">Ketentuan
+                                    Kerja</div>
+                            </section>
+                            <!-- end title -->
+
+                            <section class="md:grid md:grid-cols-2 md:divide-x p-4">
+                                <div class="col-span-1 p-2 font-body text-[0.75rem]">
+                                    <ul class="list-disc list-outside pl-2 space-y-4 text-slate-500">
+                                        <li>Setiap akan memulai & mengakhiri pekerjaan Kontraktor wajib menghubungi
+                                            PIC
+                                            dilokasi / digedung tsb.</li>
+                                        <li>Pembuatan Surat Izin Kerja dibuat 2 (dua) hari sebelum pekerjaan dimulai
+                                            dan
+                                            telah memenihi persyaratan yang berlaku, harus diperbarui setiap 7 hari.
+                                        </li>
+                                        <li>Kontraktor wajib menyertakan diagram pekerjaan atau yang telah disetujui
+                                            oleh Perusahaan(*), terutama yang berhubungan dengan pekerjaan relayout,
+                                            perubahan systme existing baik pekerjaan Sipil mauapun ME.</li>
+                                        <li>Setiap pekerja diberi tanda pengenal yang selalu dikenakan</li>
+                                        <li>Tidak diperkenankan merokok di dalam gedung.</li>
+                                        <li>Kontraktor bersedia memperbaiki segala kerusakan & kesalahan yang timbul
+                                            akibat pekerjaan yang dilakukan</li>
+                                    </ul>
+                                </div>
+                                <div class="col-span-1 p-2 font-body text-[0.75rem]">
+                                    <ul class="list-disc list-outside pl-2 space-y-4 text-slate-500">
+                                        <li>Khusus untuk pekerjaan yang berhubungan dengan Sistem Permit akan
+                                            diberikan
+                                            ijin khusus, antara lain:</li>
+                                        <ul class="list-decimal list-inside space-y-2">
+                                            <li>Hot Work Permit (pengelasan)</li>
+                                            <li>Confined Space Permit (tempat kerja yang sempit)</li>
+                                            <li>Safe Work Permit (pekerjaan beresiko) yang mencakup:</li>
+                                            <ul class="list-inside list-disc pl-3 space-y-1">
+                                                <li>Pengalian , pengeboran, pekerjaan di tempat tinggi</li>
+                                                <li>Pekerjaan pada tegangan tinggi</li>
+                                            </ul>
+                                        </ul>
+                                        <li>Tidak diperkenankan menginap di dalam area Perusahaan / gedung.</li>
+                                        <li>Pengerjaan instalasi yang berhubungan dengan Cat, Pengelasan atau
+                                            konstruksi
+                                            berat tidak diperkenankan dipekerjaan di dalam.</li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <!-- Button Agree -->
+                            <section class="p-4">
+                                <button class="flex justify-center w-full" @click="open = !open">
+                                    <h1
+                                        class="cs-font-buttonNormal px-4 py-2 bg-cs-primary rounded-md uppercase text-white">
+                                        Agree</h1>
+                                </button>
+                            </section>
+                            <!-- end Button Agree -->
+                        </div>
+                        <!-- end Ketentuan kerja -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- end modal news -->
+
+    <!-- ========= Header ========= -->
+    <div class="fixed w-full">
+        <div class="flex justify-center z-50 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+            <!-- back icon for mobile -->
+            <div class="my-auto">
+                <a href="./index.html" class="block md:hidden">
+                    <i
+                        class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                </a>
+            </div>
+            <!-- back icon for mobile -->
+            <section class=" w-full max-w-6xl md:px-4 lg:px-0">
+                <a href="./index.html">
+                    <img src="./media/img/lg-csn.png" alt="" class="h-8 md:h-10">
+                </a>
+            </section>
+        </div>
+    </div>
+    <!-- ========= end Header ========= -->
+
+    <!-- ========= Main ========= -->
+    <section class="py-20 flex justify-center">
+        <div class="max-w-6xl w-full px-4 lg:px-0 space-y-4">
+            <div class="md:grid md:grid-cols-3 md:py-8 py-4 border-b ">
+                <div class="hidden md:block">
+                    <a href="./index.html">
+                        <i
+                            class="fa-regular fa-chevron-left py-2 px-3 rounded-full bg-slate-100 hover:bg-cs-primary-hover hover:text-white transition-all"></i>
+                    </a>
+                </div>
+                <!-- title -->
+                <div class="flex justify-center  space-x-3">
+                    <h1 class="my-auto cs-font-headline2 text-cs-black">SIKA</h1>
+                </div>
+                <!-- end title -->
+            </div>
+
+            <!-- ========= main Form ========= -->
+            <div class="flex justify-center">
+                <div class="md:max-w-3xl w-full md:space-y-6 space-y-4 ">
+
+                    <!-- ========= button upload ========= -->
+                    <div class="flex justify-end">
+                        <div>
+                            <button
+                                class="bg-cs-primary py-2 px-3 rounded-md text-white hover:bg-cs-primary-hover transition-all flex space-x-3">
+                                <i class="fa-regular fa-upload"></i>
+                                <h1 class="cs-font-buttonNormal md:text-sm text-xs">Upload from EXCEL</h1>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- ========= end button upload ========= -->
+
+                    <!-- ========= Personal Data Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Submiter Data</h1>
+                        <!-- form -->
+                        <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                            <!-- Nama Tenant -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray"> Nama Tenant</h1>
+                                <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                            </div>
+                            <div class="hidden md:block"></div>
+
+                            <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0 col-span-2">
+                                <!-- Supervisor -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray">Supervisor</h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                                <!-- Nama Kontraktor  -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray"> Nama Kontraktor </h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                                <!-- Lantai/Zone -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray">Lantai/Zone </h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                                <!-- Penanggung Jawab  -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray"> Penanggung Jawab </h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                                <!-- Nomor KTP  -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray"> Nomor KTP </h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                                <!-- Alamat (Sesuai KTP) -->
+                                <div class="space-y-1">
+                                    <h1 class="cs-font-caption text-cs-gray">Alamat (Sesuai KTP) </h1>
+                                    <input type="text" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= end Personal Data Form ========= -->
+
+
+                    <!-- ========= Fit Out Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Fit Out</h1>
+                        <!-- form -->
+                        <div class="md:grid md:grid-cols-2 md:gap-3 space-y-3 md:space-y-0">
+                            <!-- date -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Select Date</h1>
+                                <input type="date" name="" id="" class="border w-full p-2 rounded-md cs-font-body">
+                            </div>
+                            <!-- time -->
+                            <div class="space-y-1">
+                                <h1 class="cs-font-caption text-cs-gray">Select Time</h1>
+
+                                <!-- radio button -->
+                                <div>
+                                    <div class="flex items-center py-2">
+                                        <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                            class="w-4 h-4 text-cs-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600  focus:ring-2">
+                                        <label for="default-radio-1" class="ml-2 cs-font-body text-cs-black">22:00 -
+                                            08:00</label>
+                                    </div>
+                                    <div class="flex items-center py-2">
+                                        <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                            class="w-4 h-4 text-cs-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600  focus:ring-2">
+                                        <label for="default-radio-1" class="ml-2 cs-font-body text-cs-black">22:00 -
+                                            08:00</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= end Fit Out Form ========= -->
+
+                    <!-- ========= Jenis Pekerjaan Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Jenis Pekerjaan</h1>
+
+                        <div class="space-y-4 pt-2">
+                            <!-- form civil -->
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-1 flex space-x-2">
+                                    <input type="checkbox" name="" id="" class="my-auto">
+                                    <h1 class="my-auto cs-font-body whitespace-nowrap">Civil
+                                    </h1>
+                                </div>
+                                <input type="text" name="" id="" class="cs-font-body w-full p-1 rounded-md col-span-3">
+                            </div>
+
+                            <!-- form Architect -->
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-1 flex space-x-2">
+                                    <input type="checkbox" name="" id="" class="my-auto">
+                                    <h1 class="my-auto cs-font-body whitespace-nowrap">Architect
+                                    </h1>
+                                </div>
+                                <input type="text" name="" id="" class="cs-font-body w-full p-1 rounded-md col-span-3">
+                            </div>
+                            <!-- form ME -->
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-1 flex space-x-2">
+                                    <input type="checkbox" name="" id="" class="my-auto">
+                                    <h1 class="my-auto cs-font-body whitespace-nowrap">ME
+                                    </h1>
+                                </div>
+                                <input type="text" name="" id="" class="cs-font-body w-full p-1 rounded-md col-span-3">
+                            </div>
+                            <!-- form AC & Plumbing -->
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-1 flex space-x-2">
+                                    <input type="checkbox" name="" id="" class="my-auto">
+                                    <h1 class="my-auto cs-font-body">AC & Plumbing
+                                    </h1>
+                                </div>
+                                <input type="text" name="" id="" class="cs-font-body w-full p-1 rounded-md col-span-3">
+                            </div>
+
+                            <!-- form Other -->
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-1 flex space-x-2">
+                                    <input type="checkbox" name="" id="" class="my-auto">
+                                    <h1 class="my-auto cs-font-body whitespace-nowrap">Other
+                                    </h1>
+                                </div>
+                                <input type="text" name="" id="" class="cs-font-body w-full p-1 rounded-md col-span-3">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 py-4">
+                            <!-- Jumlah Tenaga Kerja -->
+                            <div class="space-y-2">
+                                <h1 class="cs-font-caption text-cs-gray">Jumlah Tenaga Kerja</h1>
+                                <input type="number" name="" id="" class="w-full rounded-md cs-font-body p-1">
+                            </div>
+                            <!-- Keterangan -->
+                            <div class="space-y-2">
+                                <h1 class="cs-font-caption text-cs-gray">Keterangan</h1>
+                                <input type="text" name="" id="" class="w-full rounded-md cs-font-body p-1">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= end Jenis Pekerjaan Form ========= -->
+
+                    <!-- ========= Data Pekerja Kontraktor Form ========= -->
+                    <div class="md:border  w-full md:p-4 md:rounded-lg py-4 md:py-6">
+                        <!-- title -->
+                        <h1 class="cs-font-title md:text-lg text-base text-cs-black pb-2">Data Pekerja Kontraktor</h1>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="md:grid md:grid-cols-2 md:gap-3 space-y-2 md:space-y-0">
+
+                                <!-- photo 1 -->
+                                <div class="border rounded-md bg-white p-4 flex space-x-3">
+                                    <img src="https://images.pexels.com/photos/977935/pexels-photo-977935.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                        alt="" class="aspect-square w-20 object-cover rounded-md">
+                                    <div>
+                                        <h1 class="cs-font-caption text-cs-primary">PT.Meooww</h1>
+                                        <h1 class="cs-font-body">Mr. Meooww</h1>
+                                        <div class="space-y-1 pt-2">
+                                            <h1 class="cs-font-caption text-cs-gray">Sleep Division</h1>
+                                            <h1 class="cs-font-caption text-cs-gray">Kitchen Area</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end photo 1 -->
+
+                                <!-- photo 2 -->
+                                <div class="border rounded-md bg-white p-4 flex space-x-3">
+                                    <img src="https://images.pexels.com/photos/2173872/pexels-photo-2173872.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                        alt="" class="aspect-square w-20 object-cover rounded-md">
+                                    <div>
+                                        <h1 class="cs-font-caption text-cs-primary">PT.Meooww</h1>
+                                        <h1 class="cs-font-body">Mr. Meooww</h1>
+                                        <div class="space-y-1 pt-2">
+                                            <h1 class="cs-font-caption text-cs-gray">Sleep Division</h1>
+                                            <h1 class="cs-font-caption text-cs-gray">Kitchen Area</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end photo 2 -->
+
+                                <!-- ========= Items Form ========= -->
+                                <div class="w-full md:rounded-lg" x-data="{ open: false }">
+                                    <!-- form -->
+                                    <button class="w-full" @click="open = true">
+                                        <div
+                                            class="border p-4 rounded-md text-cs-black hover:border-cs-primary hover:text-cs-primary transition-all">
+                                            <i class="fa-solid fa-image text-cs-gray"></i>
+                                            <h1 class="cs-font-buttonNormal text-center">+ Add Pekerja</h1>
+                                        </div>
+                                    </button>
+                                    <!-- modal -->
+                                    <div class="fixed top-0 left-0 backdrop-blur" x-transition x-show="open">
+                                        <div class="h-screen w-screen md:p-8 p-4 flex justify-center">
+                                            <div class="my-auto bg-white shadow-lg w-full max-w-md rounded-md">
+                                                <div class="p-4 space-y-3">
+                                                    <h1 class="cs-font-title">Create Items</h1>
+                                                    <!-- Name -->
+                                                    <div class="space-y-1">
+                                                        <h1 class="cs-font-caption text-cs-gray">Name</h1>
+                                                        <input type="text" name="" id=""
+                                                            class="w-full border cs-font-body p-2 rounded-md text-cs-black"
+                                                            placeholder="Input your item name">
+                                                    </div>
+
+                                                    <!-- Jabatan -->
+                                                    <div class="space-y-1">
+                                                        <h1 class="cs-font-caption text-cs-gray">Jabatan</h1>
+                                                        <div>
+                                                            <input type="number" name="" id=""
+                                                                class="w-full border cs-font-body p-2 rounded-md text-cs-black">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- PT/CV -->
+                                                    <div class="space-y-1">
+                                                        <h1 class="cs-font-caption text-cs-gray">PT/CV</h1>
+                                                        <input type="text" name="" id=""
+                                                            class="w-full border cs-font-body p-2 rounded-md text-cs-black"
+                                                            placeholder="Input your item unit">
+                                                    </div>
+
+                                                    <!-- Lokasi Kerja -->
+                                                    <div class="space-y-1">
+                                                        <h1 class="cs-font-caption text-cs-gray">Lokasi Kerja</h1>
+                                                        <input type="text" name="" id=""
+                                                            class="w-full border cs-font-body p-2 rounded-md text-cs-black"
+                                                            placeholder="Input your item unit">
+                                                    </div>
+
+                                                    <!-- photo -->
+                                                    <div class="space-y-1">
+                                                        <h1 class="cs-font-caption text-cs-gray">Photo</h1>
+                                                        <div class="flex space-x-2">
+                                                            <div>
+                                                                <button class="h-20 w-20 border rounded-md">
+                                                                    <i class="fa-duotone fa-camera"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="h-20 w-20">
+                                                                <img src="https://images.pexels.com/photos/279947/pexels-photo-279947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                                    alt=""
+                                                                    class="object-cover h-20 w-20 rounded-md align-middle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Line -->
+                                                <div class="w-full h-1 bg-cs-primary-soft"></div>
+
+                                                <div class="p-4">
+                                                    <div class="flex justify-end space-x-3">
+                                                        <button @click="open = !open"
+                                                            class="p-2 text-cs-gray cs-font-buttonNormal">Cancel</button>
+                                                        <a href="./loading-filled.html">
+                                                            <button
+                                                                class="p-2 text-white cs-font-buttonNormal hover:bg-cs-primary-hover transition-all bg-cs-primary rounded-md">Submit</button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ========= end Items Form ========= -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= end Data Pekerja Kontraktor Form ========= -->
+
+                </div>
+            </div>
+            <!-- ========= end main Form ========= -->
+
+            <!-- ========= Footer ========= -->
+            <div class="fixed w-full border-t bottom-0 left-0">
+                <div class="flex justify-center z-40 px-4 md:px-0 space-x-3 md:space-x-0 border-b bg-white py-4">
+                    <div class="grid grid-cols-2 w-full md:max-w-6xl gap-3">
+                        <!-- hollow hidden for desktop -->
+                        <div class="hidden md:block"></div>
+                        <!-- reset button for mobile -->
+                        <div class="bg-blue-200 md:hidden">
+                            <button class="p-2 bg-cs-gray w-full rounded-md">
+                                <h1 class="cs-font-buttonNormal text-white">Reset</h1>
+                            </button>
+                        </div>
+
+                        <div class="flex md:justify-end w-full space-x-3">
+                            <!-- reset for desktop -->
+                            <button class="p-2 bg-cs-gray w-full rounded-md hidden md:block">
+                                <h1 class="cs-font-buttonNormal text-white">Reset</h1>
+                            </button>
+                            <!-- Submit -->
+                            <button
+                                class="p-2 bg-cs-primary hover:bg-cs-primary-hover transition-colors w-full rounded-md">
+                                <h1 class="cs-font-buttonNormal text-white">Submit</h1>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ========= end Footer ========= -->
+
+        </div>
+    </section>
+    <!-- ========= end Main ========= -->
+
+</body>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
+
+</html>
