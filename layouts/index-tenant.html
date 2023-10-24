@@ -19,44 +19,21 @@
         <div class="w-full py-4 absolute">
             <div class="flex justify-end px-10">
                 <button @click="open = true"
-                    class="py-2 px-4 rounded-md border cs-font-buttonNormal text-cs-primary hover:text-white hover:bg-cs-primary hover:border-cs-primary transition-all">Login
-                    for Tenant</button>
+                    class="py-2 px-4 rounded-md border cs-font-buttonNormal text-cs-primary hover:text-white hover:bg-cs-primary hover:border-cs-primary transition-all">Mcdonald</button>
             </div>
         </div>
         <!-- modal -->
         <div x-show="open" class="absolute h-screen w-screen bg-black/50 z-20">
             <div class="flex justify-center h-screen px-4 md:px-0">
                 <div class="my-auto p-8 rounded-md bg-white w-full max-w-md space-y-4">
-                    <!-- email -->
-                    <div class="space-y-1">
-                        <h1 class="cs-font-caption text-cs-gray">Email</h1>
-                        <input type="text" name="" id="" class="border rounded-md w-full p-2">
-                    </div>
 
-                    <!-- Password -->
-                    <div class="space-y-1">
-                        <h1 class="cs-font-caption text-cs-gray">Password</h1>
-                        <input type="password" name="" id="" class="border rounded-md w-full p-2">
-                    </div>
-
-                    <div class="flex justify-end space-x-4">
-                        <!-- button Cancel -->
-                        <div @click="open = !open">
-                            <button>
-                                <h1 class="cs-font-buttonNormal  rounded-md p-2 bg-white text-cs-gray">Cancel
-                                </h1>
-                            </button>
-                        </div>
-
-                        <!-- button login -->
-                        <a href="./index-tenant.html">
-                            <button>
-                                <h1 class="cs-font-buttonNormal border rounded-md p-2 bg-cs-primary text-white">Login
-                                    Now
-                                </h1>
-                            </button>
-                        </a>
-                    </div>
+                    <!-- button login -->
+                    <a href="./index.html">
+                        <button class="bg-red-500 w-full rounded-md">
+                            <h1 class="cs-font-buttonNormal rounded-md p-2  text-white">Log Out
+                            </h1>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
