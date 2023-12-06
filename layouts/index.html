@@ -14,6 +14,88 @@
 </head>
 
 <body>
+    <!-- modal selected -->
+    <section x-data="{ open: true }" class="h-screen w-screen absolute">
+        <div class="flex justify-center h-screen">
+            <!-- modal -->
+            <div x-show="open" class="absolute h-screen w-screen bg-black/50 z-20">
+                <div class="flex justify-center h-screen px-4 md:px-0">
+                    <div class="my-auto p-8 rounded-md bg-white w-full max-w-md space-y-4">
+                        <!-- title -->
+                        <h1 class="text-center cs-font-title text-cs-primary uppercase">Please choose who you are?</h1>
+                        <!-- end title -->
+
+                        <!-- selected -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- Vendor -->
+                            <button @click="open = !open"
+                                class="bg-white border rounded-lg transition-all group hover:bg-blue-50 hover:border-blue-200">
+                                <h1 class="cs-font-buttonNormal group-hover:text-blue-500 p-4">Vendor</h1>
+                            </button>
+                            <!-- end vendor -->
+
+                            <!-- Tenant -->
+                            <div x-data="{ open: false }" class="w-full">
+                                <button @click="open = !open"
+                                    class="bg-white border rounded-lg w-full transition-all group hover:bg-blue-50 hover:border-blue-200">
+                                    <h1 class="cs-font-buttonNormal group-hover:text-blue-500 p-4">Tenant</h1>
+                                </button>
+                                <!-- modal -->
+                                <div x-show="open" class="absolute h-screen w-screen bg-black/50 z-40 top-0 left-0">
+                                    <div class="flex justify-center h-screen px-4 md:px-0">
+                                        <div class="my-auto p-8 rounded-md bg-white w-full max-w-md space-y-4">
+                                            <!-- email -->
+                                            <div class="space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Email</h1>
+                                                <input type="text" name="" id="" class="border rounded-md w-full p-2">
+                                            </div>
+
+                                            <!-- Password -->
+                                            <div class="space-y-1">
+                                                <h1 class="cs-font-caption text-cs-gray">Password</h1>
+                                                <input type="password" name="" id=""
+                                                    class="border rounded-md w-full p-2">
+                                            </div>
+
+                                            <div class="flex justify-end space-x-4">
+                                                <!-- button Cancel -->
+                                                <div @click="open = !open">
+                                                    <button>
+                                                        <h1
+                                                            class="cs-font-buttonNormal  rounded-md p-2 bg-white text-cs-gray">
+                                                            Cancel
+                                                        </h1>
+                                                    </button>
+                                                </div>
+
+                                                <!-- button login -->
+                                                <a href="./index-tenant.html">
+                                                    <button>
+                                                        <h1
+                                                            class="cs-font-buttonNormal border rounded-md p-2 bg-cs-primary text-white">
+                                                            Login
+                                                            Now
+                                                        </h1>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end modal -->
+                            </div>
+                            <!-- end Tenant -->
+                        </div>
+                        <!-- end selected -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+        </div>
+    </section>
+    <!-- end modal selected -->
+
     <!-- login for tenant -->
     <section x-data="{ open: false }">
         <div class="w-full py-4 absolute">
